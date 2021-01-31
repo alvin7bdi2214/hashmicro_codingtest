@@ -170,8 +170,7 @@ def compare_input():
             j += 1
         return round(c/len(s1))
 
-    pct = input_percentage(input1, input2)
-    return render_template('compare_input.html', input1=input1, input2=input2, pct=pct, message=f'matching percentage: {pct}')
+    return render_template('compare_input.html', input1=input1, input2=input2)
 
 def send_reset_email(user):
     token = user.get_reset_token
